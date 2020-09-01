@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters{ 
 
-          string(name: 'COMMIT-NUM', defaultValue: 'latest', description: 'commit number')
+          string(name: 'COMMITNUM', defaultValue: '', description: 'commit number')
 
         }
 
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // sh 'git clone https://github.com/sabreensalama/jenkins_nodejs_example.git'
                 // sh 'cd jenkins_nodejs_example'
-                sh "hello  ${COMMIT-NUM}"
+                echo "hello  ${COMMITNUM}"
                 // sh "git fetch origin ${params.COMMIT-NUM}"
 
 
