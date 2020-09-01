@@ -8,10 +8,13 @@ pipeline {
 
     
     stages {
-        stage('Example') {
+        stage('Clone node repo') {
 
             steps {
-               echo "Commit - number: ${params.COMMIT-NUM}"
+                sh 'git remote add origin https://github.com/sabreensalama/jenkins_nodejs_example.git'
+                sh 'git fetch origin ${params.COMMIT-NUM}'
+
+
             }
         }
     }
