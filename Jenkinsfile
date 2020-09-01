@@ -12,7 +12,9 @@ pipeline {
 
             steps {
                 // sh 'git remote add origin https://github.com/sabreensalama/jenkins_nodejs_example.git'
-                sh "git fetch origin ${params.COMMIT-NUM}"
+                sh 'jenkins_node_example'
+                sh "git reset --hard  ${params.COMMIT-NUM}"
+                // sh "git fetch origin ${params.COMMIT-NUM}"
 
 
             }
