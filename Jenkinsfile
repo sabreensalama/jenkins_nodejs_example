@@ -12,7 +12,7 @@ pipeline {
         stage('deploy app') {
 
             steps {
-            sh "kubectl apply -f . --namespace ${CHOICE}"
+            sh "kubectl apply -f . --namespace ${params.CHOICE}"
             }
         }
 
