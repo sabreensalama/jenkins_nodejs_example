@@ -2,13 +2,13 @@ pipeline {
     agent any
     parameters{ 
 
-          string(name: 'CommitNum', defaultValue: '', description: 'commit number')
+          string(name: 'CommitNum', defaultValue: 'a197e3d7c66c041541fcaa1302803da7b4daf028', description: 'commit number')
 
         }
 
     
     stages {
-        stage('Clone node repo') {
+        stage('Clone node app stage to specific commit') {
 
             steps {
                 sh 'cd jenkins_nodejs_example'
