@@ -27,7 +27,7 @@ pipeline {
 
             steps {
                 script{
-                    docker build -t  registry .
+                    docker build . -t  registry
                 }
             }
         }
