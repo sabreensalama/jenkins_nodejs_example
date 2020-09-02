@@ -5,12 +5,11 @@ pipeline {
           string(name: 'CommitNum', defaultValue: 'a197e3d7c66c041541fcaa1302803da7b4daf028', description: 'commit number')
 
         }
-        environment {
+    environment {
             registry = "sabreensalama/jenkins-node-app:latest"
             registryCredential = "dockerhub"
-            dockerImage = ''
 
-                }
+    }
 
     
     stages {
@@ -39,7 +38,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry( '', registryCredential ) {
-                            dockerImage.push()
+                        sh "docker push $registry"
                      }
                 }
             }
