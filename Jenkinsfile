@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters{ 
 
-        choice(name: 'CHOICE', choices: ['dev', 'test'], description: 'which namesapce')
+        choice(name: 'ENV', choices: ['dev', 'test'], description: 'which namesapce')
 
         }
 
@@ -18,7 +18,15 @@ pipeline {
             sh "sed -i 's/db/${env.DATABASE}/g' ./node-app-configmap.yml"
 
 
-            sh "kubectl apply -f . --namespace ${params.CHOICE}"
+            sh "kubectl apply -f mysql-service.yml --namespace ${params.ENV}"
+            sh "kubectl apply -f node-app-pod.yml --namespace ${params.ENV}"
+            sh "kubectl apply -f node-app-service.yml --namespace ${params.ENV}"
+            sh "kubectl apply -f node-app-configmap.yml --namespace ${params.ENV}"
+
+
+
+
+
             }
         }
 
