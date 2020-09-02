@@ -4,7 +4,7 @@ metadata:
   name: mysql-configmap 
 data:
   # Configuration values can be set as key-value properties
-  host: ht
-  user: ur 
-  password: pd
-  database: de
+  HOST: mysql
+  USER: ur 
+  PASSWORD: pd
+  DATABASE: de
