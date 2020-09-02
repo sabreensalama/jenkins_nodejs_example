@@ -9,7 +9,6 @@ pipeline {
     
     stages {
 
-
         stage('deploy app') {
 
             steps {
@@ -18,4 +17,4 @@ pipeline {
         }
 
     }
-}
+
