@@ -7,7 +7,7 @@ pipeline {
         }
         environment {
             registry = "sabreensalama/jenkins-node-app:latest"
-            registryCredential = ‘dockerhub’
+            registryCredential = "dockerhub"
                   }
 
     
@@ -27,7 +27,7 @@ pipeline {
 
             steps {
                 script{
-                     docker. build registry
+                     docker.build registry
                 }
             }
         }
