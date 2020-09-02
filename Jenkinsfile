@@ -10,7 +10,7 @@ pipeline {
     stages {
 
 
-        stage('build image for node-app') {
+        stage('deploy app') {
 
             steps {
             sh "kubectl apply -f . --namespace ${CHOICE}"
