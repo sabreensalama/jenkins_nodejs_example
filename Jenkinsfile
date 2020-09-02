@@ -8,7 +8,9 @@ pipeline {
         environment {
             registry = "sabreensalama/jenkins-node-app:latest"
             registryCredential = "dockerhub"
-                  }
+            dockerImage = ''
+
+                }
 
     
     stages {
@@ -28,6 +30,15 @@ pipeline {
             steps {
                 script{
                      docker.build registry
+                }
+            }
+        }
+
+        stage('push node-app image to dockerhub') {
+
+            steps {
+                script{
+                     docker push registry
                 }
             }
         }
