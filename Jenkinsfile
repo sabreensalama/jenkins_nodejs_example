@@ -26,13 +26,9 @@ pipeline {
         stage('build image for node-app') {
 
             steps {
-
                 script{
                     docker build -t  registry .
                 }
-
-
-
             }
         }
     }
