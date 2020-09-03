@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = ('@mysql/xdevapi');
 const express = require('express')
 const app = express()
 const port = 3000
