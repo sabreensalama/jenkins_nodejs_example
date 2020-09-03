@@ -16,9 +16,8 @@ pipeline {
         stage('Clone node app stage to specific commit') {
 
             steps {
-                sh 'cd jenkins_nodejs_example'
-                sh "git fetch origin ${params.CommitNum}"
-                sh "git reset --hard ${params.CommitNum}"
+
+                sh "git checkout ${params.CommitNum}"
 
 
             }
