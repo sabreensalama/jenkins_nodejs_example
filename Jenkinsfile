@@ -16,6 +16,7 @@ pipeline {
             sh "sed -i 's/ur/${env.USER}/g' ./node-app-configmap.yml"
             sh "sed -i 's/pd/${env.PASSWORD}/g' ./node-app-configmap.yml"
             sh "sed -i 's/db/${env.DATABASE}/g' ./node-app-configmap.yml"
+            sed 'cat ./node-app-configmap.yml'
 
 
             sh "kubectl apply -f mysql-service.yml --namespace ${params.ENV}"
