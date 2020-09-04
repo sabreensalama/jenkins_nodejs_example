@@ -23,7 +23,7 @@ pipeline {
             // sh "kubectl apply -f node-app-service.yml --namespace ${params.ENV}"
             // sh "kubectl apply -f node-app-configmap.yml --namespace ${params.ENV}"
             // sh "kubectl apply -f node-app-pod.yml --namespace ${params.ENV}"
-            sh 'ansible-playbook -e 'env=${params.ENV}' -i hosts ansible_playbook.yml'
+            sh "ansible-playbook -e 'env=${params.ENV}' -i hosts ansible_playbook.yml"
 
 
             }
