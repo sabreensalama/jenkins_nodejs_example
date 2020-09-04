@@ -1,0 +1,4 @@
+- hosts: [nodeapp]
+  tasks:
+  - name:  deploy-app
+    shell: kubectl apply -f . {{ env }}
