@@ -1,4 +1,6 @@
-- hosts: [nodeapp]
+- name: a play that runs kubectl using ansible
+  hosts: 127.0.0.1
+  connection: local
   tasks:
   - name:  deploy-app
     shell: kubectl apply -f . {{ env }}
