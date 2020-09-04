@@ -7,4 +7,4 @@ data:
   HOST: mysql
   USER: ur 
   PASSWORD: pd
-  DATABASE: de
+  DATABASE: db
