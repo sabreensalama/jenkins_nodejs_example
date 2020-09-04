@@ -5,6 +5,6 @@ metadata:
 data:
   # Configuration values can be set as key-value properties
   HOST: mysql
-  USERNAME: ur 
+  USERNAME: user
   PASSWORD: pd
   DATABASE: db
