@@ -46,9 +46,9 @@ pipeline {
         stage('push image for nexus') {
 
             steps {
-              sh "docker tag  $registry ${env.NEXUS-IP}/node-app"
-              sh "docker login -u  ${env.NEXUS-USER} -p ${env.NEXUS-PASS}  ${env.NEXUS-IP}"
-              sh "docker push ${env.NEXUS-IP}/node-app"
+              sh "docker tag  $registry ${env.IP}/node-app"
+              sh "docker login -u  ${env.NEXUSER} -p ${env.PASS}  ${env.IP}"
+              sh "docker push ${env.IP}/node-app"
 
             }
         }
