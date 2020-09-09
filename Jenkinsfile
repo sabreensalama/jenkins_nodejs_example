@@ -46,7 +46,7 @@ pipeline {
         stage('build image for nexus') {
 
             steps {
-              sh "docker build -t ${env.nexus-ip}/node-app . "
+              sh "docker tag  $registry ${env.nexus-ip}/node-app  "
             }
         }
 
