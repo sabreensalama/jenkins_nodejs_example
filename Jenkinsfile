@@ -13,10 +13,10 @@ pipeline {
 
             steps {
             // sh "sed -i 's/ht/${env.HOST}/g' ./deployments/node-app-configmap.yml"
-            sh "sed -i 's/user/${env.USER}/g' ./deployments/node-app-configmap.yml"
-            sh "sed -i 's/pd/${env.PASSWORD}/g' ./deployments/node-app-configmap.yml"
-            sh "sed -i 's/db/${env.DATABASE}/g' ./deployments/node-app-configmap.yml"
-            sh 'cat ./deployments/node-app-configmap.yml'
+            sh "sed -i 's/user/${env.USER}/g' node-app-configmap.yml"
+            sh "sed -i 's/pd/${env.PASSWORD}/g' node-app-configmap.yml"
+            sh "sed -i 's/db/${env.DATABASE}/g' node-app-configmap.yml"
+            sh 'cat node-app-configmap.yml'
 
 
             // sh "kubectl apply -f mysql-service.yml --namespace ${params.ENV}"
