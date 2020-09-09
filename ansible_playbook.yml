@@ -3,10 +3,10 @@
   connection: local
   tasks:
   - name:  create configmap 
-    shell: kubectl apply -f ./deployments/node-app-configmap.yml -n {{ env }} 
+    shell: kubectl apply -f node-app-configmap.yml -n {{ env }} 
 
   - name: create app deployment
-    shell: kubectl apply -f ./deployments/node-app-pod.yml -n {{ env }} 
+    shell: kubectl apply -f node-app-pod.yml -n {{ env }} 
 
   - name: create app service
-    shell: kubectl apply -f ./deployments/node-app-service.yml -n {{ env }} 
+    shell: kubectl apply -f node-app-service.yml -n {{ env }} 
