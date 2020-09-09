@@ -3,4 +3,4 @@
   connection: local
   tasks:
   - name:  deploy-app
-    shell: kubectl apply -f . -n {{ env }} --validate=false
+    shell: kubectl apply -f deployments/. -n {{ env }} 
