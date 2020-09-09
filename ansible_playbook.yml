@@ -3,4 +3,6 @@
   connection: local
   tasks:
   - name:  deploy-app
-    shell: kubectl apply -f deployments/. -n {{ env }} 
+    shell: kubectl apply -f ./deployments/nodq-app-configmap.yml -n {{ env }} 
+    shell: kubectl apply -f ./deployments/nodq-app-pod.yml -n {{ env }} 
+    shell: kubectl apply -f ./deployments/nodq-app-service.yml -n {{ env }} 
